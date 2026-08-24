@@ -42,7 +42,8 @@ export default function DemoScenarioBar() {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-coop-500"></span>
             </span>
             <span className="text-xs font-bold uppercase tracking-wider text-coop-400 flex items-center gap-1">
-              <Sparkles className="w-3.5 h-3.5" /> Hackathon Guided Demo Presets
+              <Sparkles className="w-3.5 h-3.5" /> CoServe — Serving Homes.
+              Empowering Communities.
             </span>
           </div>
 
@@ -50,7 +51,11 @@ export default function DemoScenarioBar() {
             onClick={() => setExpanded(!expanded)}
             className="sm:hidden text-slate-400 hover:text-white text-xs"
           >
-            {expanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            {expanded ? (
+              <ChevronUp className="w-4 h-4" />
+            ) : (
+              <ChevronDown className="w-4 h-4" />
+            )}
           </button>
         </div>
 
@@ -58,7 +63,7 @@ export default function DemoScenarioBar() {
           <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
             {/* Scenario 1: Ghaziabad Water Leakage */}
             <button
-              onClick={() => handleScenarioClick('emergency')}
+              onClick={() => handleScenarioClick("emergency")}
               className="inline-flex items-center gap-1.5 px-3 py-1 bg-red-600/90 hover:bg-red-600 text-white rounded-lg text-xs font-semibold shadow-sm transition-all hover:scale-105"
               title="Trigger Instant SOS Dispatch in Ghaziabad"
             >
@@ -68,7 +73,7 @@ export default function DemoScenarioBar() {
 
             {/* Scenario 2: Worker View & Job Accept */}
             <button
-              onClick={() => handleScenarioClick('worker_accept')}
+              onClick={() => handleScenarioClick("worker_accept")}
               className="inline-flex items-center gap-1.5 px-3 py-1 bg-coop-600/90 hover:bg-coop-600 text-white rounded-lg text-xs font-semibold shadow-sm transition-all hover:scale-105"
               title="Inspect Worker Inbound Job & Accept"
             >
@@ -78,7 +83,7 @@ export default function DemoScenarioBar() {
 
             {/* Scenario 3: Admin Approval */}
             <button
-              onClick={() => handleScenarioClick('admin_verify')}
+              onClick={() => handleScenarioClick("admin_verify")}
               className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-600/90 hover:bg-amber-600 text-white rounded-lg text-xs font-semibold shadow-sm transition-all hover:scale-105 relative"
               title="Cooperative Admin Verification Queue"
             >
