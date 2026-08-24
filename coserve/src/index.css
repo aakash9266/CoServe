@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coop-50: #f0fdf4;
+  --color-coop-100: #dcfce7;
+  --color-coop-200: #bbf7d0;
+  --color-coop-300: #86efac;
+  --color-coop-400: #4ade80;
+  --color-coop-500: #22c55e;
+  --color-coop-600: #16a34a;
+  --color-coop-700: #15803d;
+  --color-coop-800: #166534;
+  --color-coop-900: #14532d;
+  --color-coop-950: #052e16;
+
+  --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+  --shadow-elevated: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Custom scrollbar for clean UI */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Leaflet map styling */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: 10;
+  font-family: inherit;
+}
+
+.custom-worker-pin {
+  background: transparent;
+  border: none;
+}
+
+.emergency-pulse {
+  animation: emergency-glow 1.5s infinite alternate;
+}
+
+@keyframes emergency-glow {
+  0% {
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.9);
+  }
+}
